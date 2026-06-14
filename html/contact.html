@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — GlowPixel Studio</title>
+  <meta name="description" content="Commission an illustration, book design, or brand identity project. Get in touch with GlowPixel Studio — response within one working day."/>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="X-Frame-Options" content="DENY"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- GlowPixel Styles -->
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../images/logo.png" alt="GlowPixel Logo"/>
+     
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span style="color:var(--ink);font-size:1.4rem"><i class="bi bi-list"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-2"><a class="nav-link nav-cta" href="contact.html">Hire Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-texture"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <p class="page-hero-eyebrow">Let's Talk</p>
+        <h1 class="page-hero-title mb-4">
+          Start a <em>Project</em>
+        </h1>
+        <p class="page-hero-sub">
+          I take on a limited number of commissions each season to give every project the attention it deserves. Reach out to tell me about yours — I'd love to hear what you're making.
+        </p>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <div style="display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);">
+            <i class="bi bi-check-circle" style="color:var(--red-vivid);font-size:1rem;"></i>
+            Response within 1 working day
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);">
+            <i class="bi bi-check-circle" style="color:var(--gold);font-size:1rem;"></i>
+            No-obligation initial chat
+          </div>
+          <div style="display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);">
+            <i class="bi bi-check-circle" style="color:var(--green-dark);font-size:1rem;"></i>
+            Clear project proposals
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center" data-aos="fade-left">
+        <img src="../images/61bf820433b55f8b70c29d7cf4789bed.jpg" style="max-height: 70vh; min-width: 25vw;" alt="Colourful design materials on a studio desk" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 20px 60px rgba(192,57,43,.15);"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section style="padding:5rem 0;background:var(--paper-warm);">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Contact Info -->
+      <div class="col-lg-8 mx-auto" data-aos="fade-right">
+        <p class="section-eyebrow">Contact Details</p>
+        <h2 class="section-title mb-4">Get in <span>Touch</span></h2>
+        <div class="divider-line"></div>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;">
+          <div class="contact-card" style="text-align:left;display:flex;gap:1.25rem;align-items:flex-start;">
+            <div class="contact-icon" style="flex-shrink:0;"><i class="bi bi-envelope-at"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">hello@glowpixel.studio</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem;">For commissions, collaborations & general enquiries</div>
+            </div>
+          </div>
+          <div class="contact-card" style="text-align:left;display:flex;gap:1.25rem;align-items:flex-start;">
+            <div class="contact-icon" style="flex-shrink:0;color:var(--gold);"><i class="bi bi-instagram"></i></div>
+            <div>
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">@glowpixelstudio</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem;">Work in progress, process shots & new projects</div>
+            </div>
+          </div>
+          <div class="contact-card" style="text-align:left;display:flex;gap:1.25rem;align-items:flex-start;">
+            <div class="contact-icon" style="flex-shrink:0;color:#1B4332;"><i class="bi bi-geo-alt"></i></div>
+            <div>
+              <div class="contact-label">Studio Location</div>
+              <div class="contact-value">Glasgow, Scotland</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem;">Available for remote work worldwide. In-person meetings by arrangement.</div>
+            </div>
+          </div>
+          <div class="contact-card" style="text-align:left;display:flex;gap:1.25rem;align-items:flex-start;">
+            <div class="contact-icon" style="flex-shrink:0;color:#7B1FA2;"><i class="bi bi-clock-history"></i></div>
+            <div>
+              <div class="contact-label">Current Availability</div>
+              <div class="contact-value">Accepting New Projects</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem;">Lead time currently 4–6 weeks. Rush projects considered — please enquire.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div>
+          <p style="font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">Follow My Work</p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-link" style="border-color:var(--border);color:var(--muted);"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" style="border-color:var(--border);color:var(--muted);"><i class="bi bi-behance"></i></a>
+            <a href="#" class="social-link" style="border-color:var(--border);color:var(--muted);"><i class="bi bi-dribbble"></i></a>
+            <a href="#" class="social-link" style="border-color:var(--border);color:var(--muted);"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" style="border-color:var(--border);color:var(--muted);"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section style="padding:5rem 0;background:var(--paper-tint);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">After You Send</p>
+      <h2 class="section-title">What Happens <span>Next</span></h2>
+      <div class="divider-line mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="values-card text-center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red-vivid);margin-bottom:1rem;">01</div>
+          <h4>I Read Your Brief</h4>
+          <p>Every enquiry is read personally. I'll review your project carefully before responding so my reply is genuinely useful — not a template.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="values-card text-center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red-vivid);margin-bottom:1rem;">02</div>
+          <h4>Discovery Call</h4>
+          <p>If there's a good fit, I'll suggest a short call (20–30 min) to discuss your project in depth, answer questions, and understand your vision.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="values-card text-center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red-vivid);margin-bottom:1rem;">03</div>
+          <h4>Written Proposal</h4>
+          <p>You'll receive a clear proposal outlining the scope, timeline, and investment — with a detailed brief document to confirm we're aligned before any work begins.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="values-card text-center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red-vivid);margin-bottom:1rem;">04</div>
+          <h4>We Begin</h4>
+          <p>Once agreed and a deposit is in place, the creative process starts. You'll receive regular updates and have clear input at every key stage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:5rem 0;background:var(--paper);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+        <p class="section-eyebrow">Before You Ask</p>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <div class="divider-line"></div>
+        <p style="color:var(--muted);font-size:.9rem;line-height:1.85;">
+          Here are the questions I receive most often. If yours isn't here, just ask — I'm happy to answer anything.
+        </p>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="faq-item">
+          <div class="faq-q">How far in advance should I get in touch?</div>
+          <div class="faq-a">As early as possible — ideally 2–3 months before your deadline. My current lead time is 4–6 weeks, but popular windows fill quickly. Rush commissions are occasionally possible at a premium; please enquire directly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you work with self-publishing authors?</div>
+          <div class="faq-a">Absolutely. A significant portion of my work is with independent and self-publishing authors who understand the value of professional design. I provide print-ready files compatible with KDP, IngramSpark, and other major POD platforms.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many revisions are included?</div>
+          <div class="faq-a">All projects include one round of revisions in the final artwork stage. Sketch and concept stages have unlimited feedback rounds — I'd rather explore broadly at the beginning than make changes at the end.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What file formats will I receive?</div>
+          <div class="faq-a">You'll receive everything you need for your use case — print-ready PDFs (CMYK, 300dpi, bleed included), high-resolution TIFFs, RGB web versions, and layered working files. EPUB-ready files are available for digital book projects.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you retain copyright of the illustration?</div>
+          <div class="faq-a">You receive a licence to use the artwork as agreed in the brief (e.g. for the book cover in all editions). I retain the right to display the work in my portfolio. Full copyright transfer is available for an additional fee — please discuss at brief stage.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is your payment structure?</div>
+          <div class="faq-a">A 50% deposit is required to secure your project slot, with the balance due on delivery of final files. For larger projects I offer milestone-based payment schedules. I accept bank transfer and most major payment platforms.</div>
+        </div>
+        <div class="faq-item" style="border-bottom:none;padding-bottom:0;">
+          <div class="faq-q">Can you work to a very tight deadline?</div>
+          <div class="faq-a">Sometimes — it depends on my current schedule. Rush projects (turnaround under 2 weeks) carry a 30% premium. Please always reach out even if your deadline feels impossibly tight; I'll tell you honestly whether I can help.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA -->
+<div id="cta-band" data-aos="fade-in">
+  <div class="container position-relative">
+    <h2 class="cta-title mb-3">Still have questions? <em>Just ask.</em></h2>
+    <p style="color:rgba(255,255,255,.6);max-width:460px;margin:0 auto 2rem;font-size:.95rem;line-height:1.8;">No question is too small. I'd rather answer ten questions upfront than have any ambiguity in the brief.</p>
+    <a href="mailto:hello@glowpixel.studio" class="btn-cta-white">hello@glowpixel.studio</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="GlowPixel"/>
+          <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--paper);">GlowPixel</span>
+        </div>
+        <p class="footer-desc">Illustration, graphic design, and book design for publishers, authors, and brands who believe in beautiful craft.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-behance"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Illustration</a></li>
+          <li><a href="#">Book Covers</a></li>
+          <li><a href="#">Book Interiors</a></li>
+          <li><a href="#">Brand Identity</a></li>
+          <li><a href="#">Packaging</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Stay Inspired</div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.8;margin-bottom:1rem;">Occasional notes on design, illustration, and publishing.</p>
+        <div style="display:flex;gap:.5rem;">
+          <input type="email" class="form-control-dark" placeholder="your@email.com" style="border-radius:3px 0 0 3px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:#fff;"/>
+          <button style="background:var(--red-vivid);color:var(--white);border:none;padding:.85rem 1.2rem;border-radius:0 3px 3px 0;cursor:pointer;font-weight:600;transition:background .2s;" onmouseover="this.style.background='#E74C3C'" onmouseout="this.style.background='var(--red-vivid)'">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GlowPixel Studio. All rights reserved.</p>
+      <p>Privacy Policy · Terms · Sitemap</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="back-top"><i class="bi bi-chevron-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/main.js"></script>
+<script>
+// ── Contact page specific form handler
+function handleContactSubmit(btn) {
+  const nameEl    = document.getElementById('cf-name');
+  const emailEl   = document.getElementById('cf-email');
+  const projectEl = document.getElementById('cf-project');
+  const msgEl     = document.getElementById('cf-message');
+  const consent   = document.getElementById('cf-consent');
+
+  let valid = true;
+
+  // Clear previous errors
+  [nameEl, emailEl, projectEl, msgEl].forEach(f => f && clearFieldError(f));
+
+  // Name
+  const name = (nameEl && nameEl.value.trim()) || '';
+  if (!name) { showFieldError(nameEl, 'Your name is required.'); valid = false; }
+  else if (name.length < 2) { showFieldError(nameEl, 'Name must be at least 2 characters.'); valid = false; }
+  else if (!/^[a-zA-Z\s'\-\.]+$/.test(name)) { showFieldError(nameEl, 'Name contains invalid characters.'); valid = false; }
+
+  // Email
+  const email = (emailEl && emailEl.value.trim()) || '';
+  if (!email) { showFieldError(emailEl, 'Email address is required.'); valid = false; }
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { showFieldError(emailEl, 'Please enter a valid email address.'); valid = false; }
+
+  // Project type
+  if (!projectEl || !projectEl.value) { showFieldError(projectEl, 'Please select a project type.'); valid = false; }
+
+  // Message
+  const msg = (msgEl && msgEl.value.trim()) || '';
+  if (!msg) { showFieldError(msgEl, 'Please describe your project — this field cannot be empty.'); valid = false; }
+  else if (msg.length < 10) { showFieldError(msgEl, 'Please provide more detail (at least 10 characters).'); valid = false; }
+
+  // Consent
+  if (consent && !consent.checked) {
+    let err = consent.parentElement.parentElement.querySelector('.consent-error');
+    if (!err) {
+      err = document.createElement('p');
+      err.className = 'consent-error';
+      err.style.cssText = 'color:#C0392B;font-size:.72rem;margin-top:.3rem;';
+      consent.parentElement.parentElement.appendChild(err);
+    }
+    err.textContent = 'Please accept the privacy consent to proceed.';
+    valid = false;
+  } else {
+    const err = document.querySelector('.consent-error');
+    if (err) err.remove();
+  }
+
+  if (!valid) return;
+
+  // Rate limit
+  if (!checkRate()) {
+    btn.textContent = '⚠ Too many submissions. Please wait a minute.';
+    btn.style.background = '#7B1FA2';
+    return;
+  }
+
+  // Submit
+  btn.disabled = true;
+  btn.innerHTML = '<span style="display:inline-block;animation:spin .8s linear infinite;">⟳</span> Sending…';
+  setTimeout(() => {
+    btn.innerHTML = '✓ Enquiry Sent — I\'ll reply within one working day.';
+    btn.style.background = '#1B4332';
+    [nameEl, emailEl, projectEl, msgEl].forEach(f => { if (f) f.value = ''; });
+    if (consent) consent.checked = false;
+  }, 1200);
+}
+</script>
+<!-- ===== FIXED SOCIAL BAR ===== -->
+<div class="social-bar">
+  <a href="https://www.fiverr.com/" class="sb-fiverr"    title="Fiverr"     target="_blank" rel="noopener"><i class="bi bi-bag-fill"></i></a>
+  <a href="https://www.facebook.com/" class="sb-facebook" title="Facebook"   target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+  <a href="https://wa.me/923001234567" class="sb-whatsapp" title="WhatsApp"  target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+  <a href="https://www.instagram.com/" class="sb-instagram" title="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+  <a href="tel:+923001234567" class="sb-call" title="Call: +92 300 123 4567"><i class="bi bi-telephone-fill"></i></a>
+</div>
+
+</body>
+</html>

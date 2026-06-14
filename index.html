@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowPixel — Graphic Design & Book Design</title>
+  <meta name="description"
+    content="Award-winning illustrator, graphic designer, and book designer. Specialising in editorial illustration, brand identity, and beautifully crafted book layouts." />
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- GlowPixel Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" class="text-white" alt="GlowPixel Logo" />
+
+      </a>
+
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span style="color:var(--ink);font-size:1.4rem"><i class="bi bi-list"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/contact.html">Contact</a></li>
+          <li class="nav-item ms-2"><a class="nav-link nav-cta" href="html/contact.html">Hire us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO CAROUSEL ============ -->
+  <section id="hero" style="padding:0;position:relative;">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="hero-slide"
+            style="background:linear-gradient(120deg,#083be4 70%,#d60606 30%);background-size:cover;background-position:center;">
+            <div class="hero-slide-overlay"></div>
+            <div class="container hero-slide-content">
+              <p class="hero-eyebrow mb-3">Illustrator · Graphic Designer · Book Designer</p>
+              <h1 class="hero-title mb-4">
+                Art That<br>
+                <em>Speaks</em><br>
+                <span class="stroke-text">Volumes.</span>
+              </h1>
+              <p class="hero-sub mb-5">
+                Crafting visual narratives through editorial illustration, brand identity, and meticulously designed
+                books — where every line, colour, and letter serves a purpose.
+              </p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#portfolio" class="btn-hero-primary">View My Work</a>
+                <a href="html/contact.html" class="btn-hero-outline">Work With Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="hero-slide"
+            style="background:linear-gradient(120deg,#04f05e 70%,#0469ec 30%);background-size:cover;background-position:center;">
+            <div class="hero-slide-overlay"></div>
+            <div class="container hero-slide-content">
+              <p class="hero-eyebrow mb-3">Book Cover Design · Interior Layout · Typography</p>
+              <h1 class="hero-title mb-4">
+                Every Page<br>
+                <em>Tells</em><br>
+                <span class="stroke-text">a Story.</span>
+              </h1>
+              <p class="hero-sub mb-5">
+                From the spine to the final page, I design books that readers feel before they read — where considered
+                typography and intelligent layout turn manuscripts into objects worth keeping.
+              </p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#portfolio" class="btn-hero-primary">See Book Projects</a>
+                <a href="html/contact.html" class="btn-hero-outline">Commission a Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="hero-slide"
+            style="background:linear-gradient(120deg,#0469ec 70%,#04f05e 33%);background-size:cover;background-position:center;">
+            <div class="hero-slide-overlay"></div>
+            <div class="container hero-slide-content">
+              <p class="hero-eyebrow mb-3">Brand Identity · Visual Systems · Packaging</p>
+              <h1 class="hero-title mb-4">
+                Brands Built<br>
+                <em>to Be</em><br>
+                <span class="stroke-text">Remembered.</span>
+              </h1>
+              <p class="hero-sub mb-5">
+                I build visual identities that hold their ground — logos, colour systems, and brand guidelines crafted
+                with enough depth to grow with your business for years to come.
+              </p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#portfolio" class="btn-hero-primary">See Brand Work</a>
+                <a href="html/contact.html" class="btn-hero-outline">Start a Brand Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.carousel-inner -->
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators" style="bottom:2rem;">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span>Illustration</span><span class="dot">✦</span>
+      <span>Book Design</span><span class="dot">✦</span>
+      <span>Typography</span><span class="dot">✦</span>
+      <span>Brand Identity</span><span class="dot">✦</span>
+      <span>Editorial Art</span><span class="dot">✦</span>
+      <span>Print Design</span><span class="dot">✦</span>
+      <span>Cover Design</span><span class="dot">✦</span>
+      <span>Packaging</span><span class="dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>Illustration</span><span class="dot">✦</span>
+      <span>Book Design</span><span class="dot">✦</span>
+      <span>Typography</span><span class="dot">✦</span>
+      <span>Brand Identity</span><span class="dot">✦</span>
+      <span>Editorial Art</span><span class="dot">✦</span>
+      <span>Print Design</span><span class="dot">✦</span>
+      <span>Cover Design</span><span class="dot">✦</span>
+      <span>Packaging</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT (snapshot) ============ -->
+  <section id="about">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="900">
+          <div class="about-img-wrap">
+            <img src="./images/WhatsApp Image 2026-06-12 at 7.39.13 PM.jpeg"
+              alt="Designer at work in the GlowPixel studio"
+              style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;display:block;" />
+            <div class="about-img-badge">
+              <strong>8+</strong>
+              <span>Years of Craft</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <p class="section-eyebrow">About Me</p>
+          <h2 class="section-title mb-3">Where <span>Art</span> Meets the Printed Page</h2>
+          <div class="divider-line"></div>
+          <p style="color:var(--muted);line-height:1.9;margin-bottom:1.25rem;font-size:.95rem;">
+            I'm an illustrator, graphic designer, and book designer with over a decade of experience bringing ideas to
+            life on paper and screen. My work lives at the intersection of fine art and commercial craft — from richly
+            detailed editorial illustrations published in international magazines to award-winning book covers that
+            compel readers to pick them up.
+          </p>
+          <p style="color:var(--muted);line-height:1.9;margin-bottom:2rem;font-size:.95rem;">
+            I believe that great design is invisible — it pulls you in without announcing itself. Whether I'm setting
+            the typography for a 400-page novel, developing a visual identity for a boutique publisher, or creating an
+            illustration series for a children's book, the guiding principle is always the same: serve the story.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="badge-tag">Hand Illustration</span>
+            <span class="badge-tag">Adobe Illustrator</span>
+            <span class="badge-tag">InDesign</span>
+            <span class="badge-tag">Procreate</span>
+            <span class="badge-tag">Photoshop</span>
+            <span class="badge-tag">Book Layout</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="stat-card">
+                <div class="stat-num" id="stat1">0</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+            <div class="col-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="stat-card">
+                <div class="stat-num" id="stat2">0</div>
+                <div class="stat-label">Books Designed</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" style="padding:5rem 0;background:var(--paper-tint);">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <p class="section-eyebrow">Expertise</p>
+          <h2 class="section-title mb-4">Creative <span>Disciplines</span></h2>
+          <div class="skill-row">
+            <div class="skill-label"><span>Illustration (Hand & Digital)</span><span>97%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill red" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Book & Publication Design</span><span>95%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="95"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Typography & Lettering</span><span>93%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill red" data-width="93"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Brand Identity Design</span><span>90%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label"><span>Art Direction</span><span>88%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill red" data-width="88"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center" data-aos="fade-left">
+          <div style="text-align:center;">
+            <div style="width:220px;height:220px;margin:auto;position:relative;">
+              <svg viewBox="0 0 200 200" width="220" height="220">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="var(--paper-mid)" stroke-width="14" />
+                <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ringGrad)" stroke-width="14"
+                  stroke-dasharray="502" stroke-dashoffset="45" stroke-linecap="round" transform="rotate(-90 100 100)"
+                  id="ringCircle" />
+                <defs>
+                  <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#C0392B" />
+                    <stop offset="100%" stop-color="#B8860B" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div
+                  style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--ink);line-height:1;">
+                  91%</div>
+                <div style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);">Client
+                  Return Rate</div>
+              </div>
+            </div>
+            <p
+              style="color:var(--muted);font-size:.85rem;margin-top:1.5rem;max-width:240px;margin-left:auto;margin-right:auto;line-height:1.75;">
+              Over nine in ten clients return for a second project — the mark of work that truly delivers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">Kind Words</p>
+        <h2 class="section-title">What Clients <span>Say</span></h2>
+        <div class="divider-line mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"The cover illustration completely transformed the book's appeal. Within weeks of
+              launch it was featured in three major book blogs and our pre-orders quadrupled. The craft and care in
+              every detail is extraordinary."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">
+
+                <img src="./images/client1.jpg"  alt="">
+              </div>
+              <div>
+                <div class="testi-name">Jessica Hartley</div>
+                <div class="testi-role">Publisher, Meridian Books</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Working with GlowPixel on our full brand identity was one of the best decisions we
+              made. The logo, colour system, and guidelines have given our studio a voice we're genuinely proud of —
+              timeless, original, and entirely ours."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" >
+                <img src="./images/client2.jpg" alt="">
+              </div>
+              <div>
+                <div class="testi-name">Marco Vitale</div>
+                <div class="testi-role">Creative Director, Studio Volare</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"My children's book illustrations are everything I dreamed of — warm, witty, and full
+              of character. Every page made me smile. Children and parents alike have fallen in love with the artwork.
+              Truly a gifted illustrator."</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><img src="./images/client3.jpg" alt=""></div>
+              <div>
+                <div class="testi-name">Amelia Osei</div>
+                <div class="testi-role">Author, The Night Garden Series</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <div id="cta-band" data-aos="fade-in">
+    <div class="container position-relative">
+      <p
+        style="font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;">
+        Ready to Begin?</p>
+      <h2 class="cta-title mb-3">Let's Make Something <em>Unforgettable.</em></h2>
+      <p style="color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 2rem;font-size:.95rem;line-height:1.8;">Whether
+        it's a single illustration or an entire book from cover to page — I'd love to hear about your project.</p>
+      <a href="html/contact.html" class="btn-cta-white">Start a Conversation</a>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT (brief) ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Let's <span>Work Together</span></h2>
+        <div class="divider-line mx-auto"></div>
+        <p style="max-width:500px;margin:0 auto;color:var(--muted);font-size:.9rem;line-height:1.85;">
+          New commissions, collaborations, and inquiries are always welcome. I typically respond within one working day.
+        </p>
+      </div>
+      <div class="row g-4 mb-5">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-envelope-at"></i></div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">hello@glowpixel.studio</div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-instagram"></i></div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@glowpixelstudio</div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-clock"></i></div>
+            <div class="contact-label">Response Time</div>
+            <div class="contact-value">Within 1 Working Day</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" data-aos="fade-up">
+        <a href="html/contact.html" class="btn-hero-primary">Go to Full Contact Page <i
+            class="bi bi-arrow-right ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="GlowPixel" />
+
+          </div>
+          <p class="footer-desc">
+            Illustration, graphic design, and book design for publishers, authors, and brands who believe in the power
+            of beautiful craft.
+          </p>
+          <div class="d-flex gap-2 mt-3 flex-wrap">
+            <a href="https://www.fiverr.com/" class="social-link" title="Fiverr" target="_blank"><i
+                class="bi bi-bag-fill"></i></a>
+            <a href="https://www.facebook.com/" class="social-link" title="Facebook" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/923001234567" class="social-link" title="WhatsApp" target="_blank"><i
+                class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" class="social-link" title="Instagram" target="_blank"><i
+                class="bi bi-instagram"></i></a>
+            <a href="tel:+923001234567" class="social-link" title="Call: +92 300 123 4567"><i
+                class="bi bi-telephone-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="footer-heading">Stay Inspired</div>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.8;margin-bottom:1rem;">
+            Get occasional notes on design, illustration, and publishing — no noise, just things worth reading.
+          </p>
+          <div style="display:flex;gap:.5rem;">
+            <input type="email" class="form-control-dark" placeholder="your@email.com"
+              style="border-radius:3px 0 0 3px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:#fff;" />
+            <button
+              style="background:var(--red-vivid);color:var(--white);border:none;padding:.85rem 1.2rem;border-radius:0 3px 3px 0;cursor:pointer;font-weight:600;white-space:nowrap;transition:background .2s;"
+              onmouseover="this.style.background='#E74C3C'" onmouseout="this.style.background='var(--red-vivid)'">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GlowPixel Studio. All rights reserved.</p>
+        <p>Privacy Policy · Terms · Sitemap</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#" id="back-top"><i class="bi bi-chevron-up"></i></a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- ===== FIXED SOCIAL BAR ===== -->
+  <div class="social-bar">
+    <a href="https://www.fiverr.com/" class="sb-fiverr" title="Fiverr" target="_blank" rel="noopener"><i
+        class="bi bi-bag-fill"></i></a>
+    <a href="https://www.facebook.com/" class="sb-facebook" title="Facebook" target="_blank" rel="noopener"><i
+        class="bi bi-facebook"></i></a>
+    <a href="https://wa.me/923001234567" class="sb-whatsapp" title="WhatsApp" target="_blank" rel="noopener"><i
+        class="bi bi-whatsapp"></i></a>
+    <a href="https://www.instagram.com/" class="sb-instagram" title="Instagram" target="_blank" rel="noopener"><i
+        class="bi bi-instagram"></i></a>
+    <a href="tel:+923001234567" class="sb-call" title="Call: +92 300 123 4567"><i class="bi bi-telephone-fill"></i></a>
+  </div>
+
+</body>
+
+</html>

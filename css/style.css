@@ -463,7 +463,7 @@ footer {
   color: rgba(255,255,255,.5); font-size: .85rem; text-decoration: none;
   transition: color .2s, padding-left .2s;
 }
-.footer-links a:hover { color: var(--red-light); padding-left: 6px; }
+.footer-links a:hover { color: var(--red-vivid); padding-left: 6px; cursor: pointer !important; }
 .social-link {
   width: 34px; height: 34px; border-radius: 50%;
   border: 1px solid rgba(255,255,255,.15);
@@ -471,7 +471,7 @@ footer {
   color: rgba(255,255,255,.5); font-size: .95rem; text-decoration: none;
   transition: border-color .25s, color .25s, background .25s;
 }
-.social-link:hover { border-color: var(--red-light); color: var(--red-light); background: rgba(192,57,43,.1); }
+.social-link:hover { border-color: var(--red-vivid) !important; color: #fff !important; background: var(--red-vivid) !important; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.08);
   margin-top: 1.5rem; padding: .9rem 0;
@@ -519,7 +519,7 @@ footer .row.gy-5 { --bs-gutter-y: 1.5rem; }
 
 /* ── BACK TO TOP ── */
 #back-top {
-  position: fixed; bottom: 2rem; right: 4rem;
+  position: fixed; bottom: 2rem; right: 0rem;
   width: 44px; height: 44px;
   background: var(--ink); color: var(--paper);
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -666,8 +666,8 @@ section{
    ============================================================ */
 .social-bar {
   position: fixed;
-  bottom: 0rem;
-  right: 0rem;
+  bottom: 2rem;
+  left: 0rem;
   display: flex;
   flex-direction: column;
   gap: .55rem;

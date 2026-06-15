@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy & Terms — GlowPixel Studio</title>
+  <meta name="description" content="GlowPixel Studio's Privacy Policy and Terms of Service. Understand how we handle your data and the terms governing our design services."/>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="X-Frame-Options" content="DENY"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()"/>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+  <!-- AOS -->
+  <link rel="stylesheet" href="../css/aos.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="../css/bootstrap-icons.css"/>
+  <!-- GlowPixel Global Styles -->
+  <link rel="stylesheet" href="../css/style.css"/>
+
+  <style>
+    /* ── PAGE HERO ── */
+    .pp-hero {
+      background: linear-gradient(120deg, #1a0a2e 0%, #1A237E 60%, #2979FF 100%);
+      padding: 7rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .pp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.04) 1px, transparent 0);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .pp-hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: .15;
+      pointer-events: none;
+    }
+    .pp-hero-blob-1 { width: 440px; height: 440px; background: var(--red-vivid); top: -120px; right: -80px; }
+    .pp-hero-blob-2 { width: 320px; height: 320px; background: var(--gold); bottom: -80px; left: -60px; }
+    .pp-eyebrow {
+      font-size: .7rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--red-light);
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+    .pp-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .pp-hero-title em { font-style: italic; color: #7eb3ff; }
+    .pp-hero-sub {
+      font-size: .95rem;
+      color: rgba(255,255,255,.55);
+      font-weight: 300;
+      line-height: 1.9;
+      max-width: 540px;
+      margin-top: 1.2rem;
+    }
+    .pp-updated {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      color: rgba(255,255,255,.4);
+      margin-top: 2rem;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: .4rem .9rem;
+      border-radius: 50px;
+    }
+
+    /* ── STICKY TAB NAV ── */
+    .pp-tab-nav {
+      background: var(--paper-warm);
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 62px;
+      z-index: 900;
+    }
+    .pp-tab-nav .nav-link {
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 1rem 1.5rem;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      border-radius: 0;
+      transition: color .2s, border-color .2s;
+      background: none;
+    }
+    .pp-tab-nav .nav-link:hover { color: var(--ink); }
+    .pp-tab-nav .nav-link.active {
+      color: var(--blue-bright);
+      border-bottom-color: var(--blue-bright);
+      background: none;
+    }
+
+    /* ── CONTENT LAYOUT ── */
+    .pp-body {
+      background: var(--paper-warm);
+      padding: 4rem 0 6rem;
+    }
+    .pp-sidebar {
+      position: sticky;
+      top: 120px;
+      align-self: flex-start;
+    }
+    .pp-toc {
+      background: var(--paper-tint);
+      border-left: 3px solid var(--blue-bright);
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .pp-toc-title {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .pp-toc a {
+      display: block;
+      font-size: .82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: .35rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color .2s, padding-left .2s;
+    }
+    .pp-toc a:last-child { border-bottom: none; }
+    .pp-toc a:hover { color: var(--blue-bright); padding-left: 6px; }
+    .pp-toc a.active { color: var(--blue-bright); font-weight: 600; }
+
+    /* ── SECTIONS ── */
+    .pp-section {
+      display: none;
+    }
+    .pp-section.active {
+      display: block;
+    }
+    .pp-article {
+      max-width: 760px;
+    }
+    .pp-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .5rem;
+    }
+    .pp-section-lead {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .pp-block {
+      margin-bottom: 2.8rem;
+      scroll-margin-top: 140px;
+    }
+    .pp-block-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin-bottom: .9rem;
+    }
+    .pp-block-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blue-deep);
+      color: #fff;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+    .pp-block p,
+    .pp-block li {
+      font-size: .9rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+    }
+    .pp-block ul {
+      padding-left: 1.2rem;
+      margin-top: .5rem;
+    }
+    .pp-block ul li { margin-bottom: .4rem; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .pp-highlight {
+      background: linear-gradient(135deg, rgba(41,121,255,.06) 0%, rgba(41,121,255,.02) 100%);
+      border: 1px solid rgba(41,121,255,.18);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0;
+    }
+    .pp-highlight p {
+      font-size: .88rem;
+      color: var(--blue-deep);
+      margin: 0;
+      line-height: 1.8;
+    }
+    .pp-warning {
+      background: rgba(192,57,43,.05);
+      border: 1px solid rgba(192,57,43,.2);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .pp-warning p { font-size: .88rem; color: #8b2012; margin: 0; line-height: 1.8; }
+
+    /* ── TABLE ── */
+    .pp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: .85rem;
+    }
+    .pp-table th {
+      background: var(--ink);
+      color: #fff;
+      padding: .7rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .pp-table td {
+      padding: .65rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-soft);
+      vertical-align: top;
+    }
+    .pp-table tr:last-child td { border-bottom: none; }
+    .pp-table tr:nth-child(even) td { background: var(--paper-tint); }
+
+    /* ── CONTACT CARD ── */
+    .pp-contact-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 12px;
+      padding: 2.2rem;
+      margin-top: 2.5rem;
+    }
+    .pp-contact-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .pp-contact-card p { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.8; margin-bottom: 1.2rem; }
+    .pp-contact-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--blue-bright);
+      color: #fff;
+      padding: .7rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .pp-contact-card a:hover { background: #1a66e0; }
+
+    /* ── DIVIDER ── */
+    .pp-divider {
+      border: none;
+      border-top: 1px solid var(--border-med);
+      margin: 2.5rem 0;
+    }
+
+    /* ── FOOTER (same as site) ── */
+    footer.site-footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.7);
+      padding: 4rem 0 0;
+    }
+    .footer-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: .04em;
+    }
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: .45rem; }
+    .footer-links a { color: rgba(255,255,255,.45); font-size: .82rem; text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 1.4rem 0;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+      font-size: .78rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .footer-bottom a:hover { color: #fff; }
+    .form-control-dark {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      padding: .75rem 1rem;
+      font-size: .85rem;
+      flex: 1;
+      outline: none;
+    }
+    .form-control-dark::placeholder { color: rgba(255,255,255,.3); }
+    .form-control-dark:focus { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.1); }
+
+    /* back to top */
+    #back-top {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 40px; height: 40px;
+      background: var(--ink); color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,.2);
+      opacity: 0; transition: opacity .3s;
+      z-index: 999;
+    }
+    #back-top.visible { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../images/logo.png" alt="GlowPixel Logo"/>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span style="color:var(--ink);font-size:1.4rem"><i class="bi bi-list"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-2"><a class="nav-link nav-cta" href="contact.html">Hire Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="pp-hero">
+  <div class="pp-hero-blob pp-hero-blob-1"></div>
+  <div class="pp-hero-blob pp-hero-blob-2"></div>
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8" data-aos="fade-up">
+        <p class="pp-eyebrow"><i class="bi bi-shield-check me-2"></i>Legal</p>
+        <h1 class="pp-hero-title">Privacy Policy &amp;<br><em>Terms of Service</em></h1>
+        <p class="pp-hero-sub">We believe in being straightforward about what we collect, why we collect it, and how we use it. These documents govern your use of GlowPixel Studio services.</p>
+        <span class="pp-updated">
+          <i class="bi bi-calendar3"></i>
+          Last updated: 15 June 2026
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TAB NAV ============ -->
+<div class="pp-tab-nav">
+  <div class="container">
+    <ul class="nav" id="ppTabs">
+      <li class="nav-item">
+        <button class="nav-link active" data-target="privacy">
+          <i class="bi bi-shield-lock me-2"></i>Privacy Policy
+        </button>
+      </li>
+     
+    </ul>
+  </div>
+</div>
+
+<!-- ============ CONTENT ============ -->
+<section class="pp-body">
+  <div class="container">
+    <div class="row gap-lg-0 gap-4">
+
+      <!-- SIDEBAR (ToC) -->
+      <div class="col-lg-3 order-lg-0 order-1">
+        <div class="pp-sidebar">
+          <div class="pp-toc" id="tocPrivacy">
+            <p class="pp-toc-title">On this page</p>
+            <a href="#priv-collect" class="toc-link">What We Collect</a>
+            <a href="#priv-use" class="toc-link">How We Use It</a>
+            <a href="#priv-share" class="toc-link">Sharing Your Data</a>
+            <a href="#priv-cookies" class="toc-link">Cookies</a>
+            <a href="#priv-retention" class="toc-link">Data Retention</a>
+            <a href="#priv-rights" class="toc-link">Your Rights</a>
+            <a href="#priv-security" class="toc-link">Security</a>
+            <a href="#priv-children" class="toc-link">Children's Privacy</a>
+            <a href="#priv-contact" class="toc-link">Contact Us</a>
+          </div>
+          <div class="pp-toc d-none" id="tocTerms">
+            <p class="pp-toc-title">On this page</p>
+            <a href="#terms-agreement" class="toc-link">Agreement</a>
+            <a href="#terms-services" class="toc-link">Our Services</a>
+            <a href="#terms-ip" class="toc-link">Intellectual Property</a>
+            <a href="#terms-payment" class="toc-link">Payment & Fees</a>
+            <a href="#terms-revisions" class="toc-link">Revisions</a>
+            <a href="#terms-liability" class="toc-link">Limitation of Liability</a>
+            <a href="#terms-termination" class="toc-link">Termination</a>
+            <a href="#terms-governing" class="toc-link">Governing Law</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="col-lg-9">
+
+        <!-- ======= PRIVACY POLICY ======= -->
+        <div class="pp-section active" id="privacy">
+          <div class="pp-article" data-aos="fade-up">
+            <h2 class="pp-section-title">Privacy Policy</h2>
+            <p class="pp-section-lead">GlowPixel Studio ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This policy explains our practices when you visit our website or engage our design services.</p>
+
+            <div class="pp-block" id="priv-collect">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-database"></i></span>
+                What We Collect
+              </h3>
+              <p>We collect only the information necessary to provide our services:</p>
+              <table class="pp-table mt-3">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Examples</th>
+                    <th>Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Identity</strong></td>
+                    <td>Name, business name</td>
+                    <td>You, directly</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Contact</strong></td>
+                    <td>Email address, phone number</td>
+                    <td>Contact form, email</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Project details</strong></td>
+                    <td>Brief documents, brand assets, references</td>
+                    <td>You, during onboarding</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical</strong></td>
+                    <td>IP address, browser type, pages visited</td>
+                    <td>Automatic (server logs)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Communications</strong></td>
+                    <td>Emails, messages sent to us</td>
+                    <td>You, directly</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pp-highlight mt-3">
+                <p><i class="bi bi-info-circle me-2"></i>We do <strong>not</strong> collect sensitive personal data (health, financial, or biometric information) and do not run advertising trackers on this site.</p>
+              </div>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-use">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-gear"></i></span>
+                How We Use It
+              </h3>
+              <p>Your data is used exclusively to:</p>
+              <ul>
+                <li>Respond to enquiries and deliver agreed design services</li>
+                <li>Manage project communication and feedback rounds</li>
+                <li>Issue invoices and process payments through secure third-party processors</li>
+                <li>Send occasional studio updates (only if you opt in; you can unsubscribe at any time)</li>
+                <li>Improve website performance based on anonymised usage data</li>
+                <li>Comply with applicable legal obligations</li>
+              </ul>
+              <p class="mt-3">We never use your data for automated decision-making or profiling.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-share">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-share"></i></span>
+                Sharing Your Data
+              </h3>
+              <p>We do not sell, rent, or trade your personal information. We share data only in these limited circumstances:</p>
+              <ul>
+                <li><strong>Service providers:</strong> payment processors (e.g. Stripe or PayPal), cloud storage, and project management tools — all under strict data processing agreements</li>
+                <li><strong>Legal requirement:</strong> if required by law, court order, or regulatory authority</li>
+                <li><strong>Business transfer:</strong> if GlowPixel Studio is acquired or merges, data transfers under equivalent protections</li>
+              </ul>
+              <p class="mt-2">All third-party providers are assessed for data security compliance before engagement.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-cookies">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-browser-chrome"></i></span>
+                Cookies
+              </h3>
+              <p>This website uses a minimal set of cookies:</p>
+              <table class="pp-table mt-2">
+                <thead>
+                  <tr><th>Cookie</th><th>Purpose</th><th>Duration</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>session_id</code></td>
+                    <td>Maintains your session while browsing</td>
+                    <td>Session only</td>
+                  </tr>
+                  <tr>
+                    <td><code>_ga</code></td>
+                    <td>Anonymised analytics (Google Analytics, if enabled)</td>
+                    <td>2 years</td>
+                  </tr>
+                  <tr>
+                    <td><code>pp_consent</code></td>
+                    <td>Stores your cookie preferences</td>
+                    <td>1 year</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="mt-2">You can disable cookies in your browser settings at any time. Disabling cookies does not affect your ability to use our core services.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-retention">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-clock-history"></i></span>
+                Data Retention
+              </h3>
+              <p>We retain your data only as long as necessary:</p>
+              <ul>
+                <li><strong>Project files and communications:</strong> 3 years after project completion, for dispute resolution and portfolio reference (with your consent)</li>
+                <li><strong>Invoice and payment records:</strong> 7 years, as required by accounting law</li>
+                <li><strong>Enquiry data (no project started):</strong> 12 months, then deleted</li>
+                <li><strong>Newsletter subscribers:</strong> until you unsubscribe</li>
+              </ul>
+              <p class="mt-2">After the retention period, data is securely deleted or anonymised.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-rights">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-person-check"></i></span>
+                Your Rights
+              </h3>
+              <p>Depending on your jurisdiction, you have the right to:</p>
+              <ul>
+                <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+                <li><strong>Correction</strong> — request we correct inaccurate data</li>
+                <li><strong>Erasure</strong> — request deletion of your data ("right to be forgotten")</li>
+                <li><strong>Portability</strong> — receive your data in a structured, machine-readable format</li>
+                <li><strong>Restriction</strong> — request we limit processing of your data</li>
+                <li><strong>Objection</strong> — object to processing based on legitimate interests</li>
+                <li><strong>Withdraw consent</strong> — at any time, without affecting prior lawful processing</li>
+              </ul>
+              <div class="pp-highlight mt-3">
+                <p><i class="bi bi-envelope me-2"></i>To exercise any right, email us at <strong>privacy@glowpixel.studio</strong>. We will respond within 30 days.</p>
+              </div>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-security">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-lock"></i></span>
+                Security
+              </h3>
+              <p>We implement appropriate technical and organisational measures to protect your data, including:</p>
+              <ul>
+                <li>HTTPS encryption for all data in transit</li>
+                <li>Access control — only authorised team members handle client data</li>
+                <li>Regular backups with encrypted storage</li>
+                <li>Secure deletion protocols when data is no longer needed</li>
+              </ul>
+              <div class="pp-warning">
+                <p><i class="bi bi-exclamation-triangle me-2"></i>No method of internet transmission is 100% secure. While we take every reasonable precaution, we cannot guarantee absolute security. Please notify us immediately if you believe your data has been compromised.</p>
+              </div>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-children">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-person-x"></i></span>
+                Children's Privacy
+              </h3>
+              <p>Our services are intended for individuals aged 18 and over. We do not knowingly collect personal data from children under 13. If you believe a child has submitted data to us, please contact us immediately and we will delete it promptly.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="priv-contact">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-envelope-at"></i></span>
+                Contact Us
+              </h3>
+              <p>For any privacy-related questions, requests, or complaints, please reach out:</p>
+              <div class="pp-contact-card">
+                <h4>GlowPixel Studio</h4>
+                <p>We aim to resolve all privacy concerns within 30 days. If you are unsatisfied with our response, you have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.</p>
+                <a href="contact.html"><i class="bi bi-envelope-fill"></i> Get in Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= TERMS OF SERVICE ======= -->
+        <div class="pp-section" id="terms">
+          <div class="pp-article" data-aos="fade-up">
+            <h2 class="pp-section-title">Terms of Service</h2>
+            <p class="pp-section-lead">These Terms govern your engagement with GlowPixel Studio for graphic design, illustration, and book design services. By commissioning work or using this website, you accept these terms.</p>
+
+            <div class="pp-block" id="terms-agreement">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-handshake"></i></span>
+                Agreement
+              </h3>
+              <p>A contract between you ("Client") and GlowPixel Studio ("Studio") is formed when:</p>
+              <ul>
+                <li>You accept a written project proposal or quote, or</li>
+                <li>You make a deposit payment, or</li>
+                <li>You provide written confirmation of project commencement</li>
+              </ul>
+              <p class="mt-2">These Terms form part of every project agreement unless expressly modified in writing by both parties.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-services">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-palette"></i></span>
+                Our Services
+              </h3>
+              <p>GlowPixel Studio provides creative services including but not limited to:</p>
+              <ul>
+                <li>Editorial illustration and custom artwork</li>
+                <li>Brand identity and logo design</li>
+                <li>Book cover and interior layout design</li>
+                <li>Packaging and print collateral design</li>
+              </ul>
+              <p class="mt-2">The specific scope, deliverables, timeline, and pricing are defined in each individual project proposal. Anything outside the agreed scope is subject to additional fees and written agreement.</p>
+              <div class="pp-highlight mt-3">
+                <p><i class="bi bi-info-circle me-2"></i>The Studio reserves the right to decline any project at its sole discretion, including projects that conflict with our values or capacity.</p>
+              </div>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-ip">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-award"></i></span>
+                Intellectual Property
+              </h3>
+              <p><strong>Before full payment:</strong> All work created by GlowPixel Studio remains the intellectual property of the Studio. Previews and drafts may not be used commercially.</p>
+              <p class="mt-2"><strong>After full payment:</strong> The Client receives a licence to use the final agreed deliverables for the purposes specified in the project brief. Unless a full IP transfer is explicitly purchased and noted in the proposal, the Studio retains the underlying copyright.</p>
+              <ul class="mt-2">
+                <li>The Studio retains the right to display all work in its portfolio, on social media, and in marketing materials, unless confidentiality is explicitly agreed in writing</li>
+                <li>The Client may not resell, sublicense, or transfer the work to third parties without prior written consent</li>
+                <li>Source files are only provided if explicitly included in the proposal</li>
+              </ul>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-payment">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-credit-card"></i></span>
+                Payment &amp; Fees
+              </h3>
+              <ul>
+                <li><strong>Deposit:</strong> 50% of the project fee is due before work commences</li>
+                <li><strong>Final payment:</strong> the remaining 50% is due before delivery of final files</li>
+                <li><strong>Late payment:</strong> invoices unpaid within 14 days of the due date incur a 5% late fee per 30-day period</li>
+                <li><strong>Cancellation:</strong> the deposit is non-refundable if the Client cancels after work has commenced</li>
+                <li><strong>Currencies:</strong> all prices are in USD unless otherwise stated in the proposal</li>
+              </ul>
+              <div class="pp-warning mt-3">
+                <p><i class="bi bi-exclamation-triangle me-2"></i>Work will pause if payment is overdue by more than 14 days. The Studio is not liable for delays caused by late payment.</p>
+              </div>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-revisions">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-arrow-repeat"></i></span>
+                Revisions
+              </h3>
+              <p>Each project proposal specifies the number of included revision rounds. Our standard packages include:</p>
+              <table class="pp-table mt-2">
+                <thead>
+                  <tr><th>Service Type</th><th>Included Rounds</th><th>Additional Round</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Logo / Brand Identity</td><td>3 rounds</td><td>$75/round</td></tr>
+                  <tr><td>Book Cover</td><td>2 rounds</td><td>$60/round</td></tr>
+                  <tr><td>Book Interior Layout</td><td>2 rounds</td><td>$50/round</td></tr>
+                  <tr><td>Illustration</td><td>2 rounds</td><td>$80/round</td></tr>
+                </tbody>
+              </table>
+              <p class="mt-2">A "revision" means changes within the original agreed brief. A change of direction or new concept is treated as a new project phase and quoted separately.</p>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-liability">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-shield-exclamation"></i></span>
+                Limitation of Liability
+              </h3>
+              <p>To the fullest extent permitted by law:</p>
+              <ul>
+                <li>The Studio's total liability for any claim shall not exceed the fees paid for the specific project in dispute</li>
+                <li>The Studio is not liable for indirect, consequential, or incidental losses, including loss of business, revenue, or anticipated savings</li>
+                <li>The Client is responsible for ensuring all content provided (text, images, trademarks) does not infringe third-party rights. The Studio accepts no liability for third-party IP infringement in client-supplied materials</li>
+                <li>The Studio is not liable for delays caused by the Client's late provision of materials, feedback, or approvals</li>
+              </ul>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block" id="terms-termination">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-x-circle"></i></span>
+                Termination
+              </h3>
+              <p>Either party may terminate the agreement with written notice. Upon termination:</p>
+              <ul>
+                <li>The Client owes payment for all work completed up to the termination date, calculated pro-rata against the project total</li>
+                <li>The deposit is non-refundable under all circumstances once work has commenced</li>
+                <li>All deliverables remain the property of the Studio until outstanding fees are paid in full</li>
+                <li>The Studio may terminate immediately if the Client requests illegal, offensive, or unethical work</li>
+              </ul>
+            </div>
+
+            <hr class="pp-divider"/>
+
+            <div class="pp-block " id="terms-governing">
+              <h3 class="pp-block-title">
+                <span class="pp-block-icon"><i class="bi bi-globe-americas"></i></span>
+                Governing Law
+              </h3>
+              <p>These Terms are governed by the laws of Pakistan. Any disputes shall first be attempted to be resolved through good-faith negotiation. Failing that, disputes will be referred to binding arbitration before any court proceedings.</p>
+              <p class="mt-2">If any provision of these Terms is found to be unenforceable, the remaining provisions continue in full force.</p>
+              <div class="pp-contact-card mt-4">
+                <h4>Questions about these Terms?</h4>
+                <p>We'd rather clarify upfront than deal with confusion mid-project. Reach out before you commit.</p>
+                <a href="contact.html"><i class="bi bi-chat-dots-fill"></i> Start a Conversation</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- end sections -->
+
+      </div><!-- end col-lg-9 -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="GlowPixel"/>
+          <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--paper);"></span>
+        </div>
+        <p class="footer-desc">Illustration, graphic design, and book design for publishers, authors, and brands who believe in beautiful craft.</p>
+        <div class="d-flex gap-2 mt-3 flex-wrap">
+          <a href="https://www.fiverr.com/s/pd7oVdY" class="social-link" title="Fiverr" target="_blank" rel="noopener"><i class="bi bi-bag-fill"></i></a>
+          <a href="https://www.facebook.com/" class="social-link" title="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/message/KM3ZIR6MPZVJK1" class="social-link" title="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.instagram.com/" class="social-link" title="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="mailto:mumtazsaeed1819@gmail.com" class="social-link" title="Gmail"><i class="bi bi-envelope-at"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/html/about.html">About</a></li>
+          <li><a href="/index.html#portfolio">Portfolio</a></li>
+          <li><a href="/html/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="">Illustration</a></li>
+          <li><a href="">Book Covers</a></li>
+          <li><a href="">Book Interiors</a></li>
+          <li><a href="">Brand Identity</a></li>
+          <li><a href="">Packaging</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="fs-4 text-white-50">Designed & Coded By:</div>
+        <p style="font-size:25px;color:rgb(255, 255, 255);line-height:1.8;margin-bottom:1rem;">Saad Muavia</p>
+        <div style="display:flex;gap:.5rem;">
+       <a href="https://saadmuavia-dev.github.io/Portofolio/" target="_blank" style="text-decoration: none;"> 
+          <button style="background:var(--red-vivid);color:var(--white);border:none;padding:3px 6px;border-radius:0 3px 3px 0;cursor:pointer;font-weight:600;transition:background .2s;" onmouseover="this.style.background='#E74C3C'" onmouseout="this.style.background='var(--red-vivid)'">
+           learn More <i class="bi bi-arrow-right"></i>
+          </button></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-white-50">
+      <p>© 2026 GlowPixel. All rights reserved.</p>
+      <p> <a href="/html/privacy-policy.html" target="_parent" style="text-decoration: none;">Privacy Policy · Terms · Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="back-top"><i class="bi bi-chevron-up"></i></a>
+
+<!-- Social Floating Bar -->
+<div class="social-bar">
+  <a href="https://www.fiverr.com/" class="sb-fiverr" title="Fiverr" target="_blank"><i class="bi bi-bag-fill"></i></a>
+  <a href="https://www.facebook.com/" class="sb-facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+  <a href="https://wa.me/923001234567" class="sb-whatsapp" title="WhatsApp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  <a href="https://www.instagram.com/" class="sb-instagram" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+  <a href="tel:+923001234567" class="sb-call" title="Call Us"><i class="bi bi-telephone-fill"></i></a>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  // ── TAB SWITCHING ──
+  const tabs = document.querySelectorAll('#ppTabs .nav-link');
+  const tocPrivacy = document.getElementById('tocPrivacy');
+  const tocTerms = document.getElementById('tocTerms');
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.target;
+      document.querySelectorAll('.pp-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(target).classList.add('active');
+      // Swap ToC
+      if (target === 'privacy') {
+        tocPrivacy.classList.remove('d-none');
+        tocTerms.classList.add('d-none');
+      } else {
+        tocPrivacy.classList.add('d-none');
+        tocTerms.classList.remove('d-none');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // ── ACTIVE TOC HIGHLIGHT ON SCROLL ──
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-120px 0px -70% 0px' });
+
+  document.querySelectorAll('.pp-block[id]').forEach(el => observer.observe(el));
+
+  // ── BACK TO TOP ──
+  const backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ── AOS ──
+  if (typeof AOS !== 'undefined') AOS.init({ duration: 700, once: true });
+</script>
+</body>
+</html>

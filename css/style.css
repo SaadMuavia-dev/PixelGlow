@@ -666,8 +666,8 @@ section{
    ============================================================ */
 .social-bar {
   position: fixed;
-  bottom: 2rem;
-  left: 0rem;
+  bottom: .5rem;
+  left: .5rem;
   display: flex;
   flex-direction: column;
   gap: .55rem;

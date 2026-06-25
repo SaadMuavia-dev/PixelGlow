@@ -4,17 +4,17 @@
    ============================================================ */
 
 :root {
-  --ink:          #1f1d1d;
+  --ink:          #086dfa;
   --ink-soft:     #2C2C2C;
   --paper:        #eaf3f1;
   --paper-warm:   #FAFAF8;
   --paper-tint:   #F4F2EE;
   --paper-mid:    #cbe6de;
-  --red-vivid:    #C0392B;
-  --red-light:    #E74C3C;
-  --gold:         #B8860B;
-  --gold-light:   #D4A017;
-  --blue-deep:    #1A237E;
+  --red-vivid:    #4c8ecf;
+  --red-light:    #E6706B;
+  --gold:         #2ad9bf;
+  --gold-light:   #E2B439;
+  --blue-deep:    #0b4af7;
   --blue-bright:  #2979FF;
   --green-dark:   #1B4332;
   --green-mid:    #2D6A4F;
@@ -84,10 +84,10 @@ nav.navbar {
   transition: background .25s, transform .2s, box-shadow .25s !important;
 }
 .nav-cta:hover {
-  background: #a93226 !important;
-  color: #fff !important;
+  background: #0532ac !important;
+  color: #f5f3f3 !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(192,57,43,.5) !important;
+  box-shadow: 0 5px 30px rgba(223, 211, 210, 0.99) !important;
 }
 .nav-cta::after { display: none !important; }
 
@@ -133,7 +133,7 @@ nav.navbar {
   font-size: clamp(3rem, 7vw, 6.5rem);
   font-weight: 900;
   line-height: 1.0;
-  color: var(--ink);
+  color: rgba(9, 57, 246, 0.96);
 }
 .hero-title em { font-style: italic; color: var(--red-vivid); }
 .hero-title .stroke-text {
@@ -156,14 +156,14 @@ nav.navbar {
 }
 .btn-hero-primary:hover { background: var(--red-vivid); transform:translateY(-3px); box-shadow:0 12px 40px rgba(192,57,43,.25); color: var(--paper); }
 .btn-hero-outline {
-  background: transparent; color: var(--ink);
-  border: 1.5px solid var(--border-med); border-radius: 2px;
+  background: transparent; color: rgb(11, 30, 233);
+  border: 1.5px solid var(--blue-deep); border-radius: 2px;
   padding: .9rem 2.2rem; font-size: .9rem; font-weight: 500;
   transition: border-color .25s, color .25s, transform .25s;
   text-decoration: none; display: inline-block;
   text-transform: uppercase; letter-spacing: .06em;
 }
-.btn-hero-outline:hover { border-color:var(--red-vivid); color:var(--red-vivid); transform:translateY(-3px); }
+.btn-hero-outline:hover { border-color:var(--blue-bright); color:var(--blue-bright); transform:translateY(-3px); }
 
 /* Book stack animation */
 .book-stack {
@@ -204,10 +204,13 @@ nav.navbar {
   letter-spacing: .1em; text-transform: uppercase;
   white-space: nowrap;
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%) sepia(95%) saturate(2000%) hue-rotate(210deg) !important;
+}
 /* ── MARQUEE ── */
 .marquee-strip {
-  background: var(--ink);
+  background: var(--blue-deep);
   overflow: hidden; padding: .85rem 0;
   white-space: nowrap;
 }
@@ -669,9 +672,12 @@ section{
   bottom: .5rem;
   left: .5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: .55rem;
   z-index: 1040;
+}
+@media(min-width:992px){
+  .social-bar { flex-direction: column; }
 }
 .social-bar a {
   width: 38px;

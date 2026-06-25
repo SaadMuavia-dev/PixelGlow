@@ -672,13 +672,11 @@ section{
   bottom: .5rem;
   left: .5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: .55rem;
   z-index: 1040;
 }
-@media(min-width:992px){
-  .social-bar { flex-direction: column; }
-}
+
 .social-bar a {
   width: 38px;
   height: 38px;

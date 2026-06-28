@@ -1,5 +1,5 @@
 /* ============================================================
-   GlowPixel — main.js
+   PixelGlow — main.js
    Illustrator, Graphic Designer & Book Designer Portfolio
    ============================================================ */
 

@@ -1,0 +1,1 @@
+document.addEventListener("contextmenu",function(e){e.preventDefault()}),document.addEventListener("keydown",function(e){var t=e.key?e.key.toUpperCase():"",n=(e.ctrlKey||e.metaKey)&&("U"===t||"S"===t||e.shiftKey&&("I"===t||"J"===t||"C"===t));if("F12"===t||n)return e.preventDefault(),!1});
